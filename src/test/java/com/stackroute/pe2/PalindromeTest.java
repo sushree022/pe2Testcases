@@ -10,6 +10,9 @@ public class PalindromeTest {
     Palindrome palindrome;
 
     @Before
+/* This methods runs, before running any one of the test case .
+   It is used to initialize the required variables
+ */
     public void setup()
     {
 //        arrange
@@ -17,6 +20,9 @@ public class PalindromeTest {
     }
 
     @After
+/* This methods runs, before running any one of the test case .
+   It is used to initialize the required variables
+ */
     public void teardown()
     {
         palindrome= null;
@@ -25,7 +31,7 @@ public class PalindromeTest {
     @Test
     public void givenNumberShouldReturnAReverseNumber()
     {
-        //        act
+//        act
         String actualresult = this.palindrome.reverseNumberString("2567");
 //        assert
 
@@ -52,11 +58,16 @@ public class PalindromeTest {
     @Test
     public void givenStringShouldReturnAStringMessage()
     {
-        //        act
+//        act
         String actualresult = this.palindrome.reverseNumberString("");
 //        assert
 
         assertEquals("not palindrome", actualresult);
+    }
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
+    {
+        this.palindrome.reverseNumberString(null);
     }
 
 }
