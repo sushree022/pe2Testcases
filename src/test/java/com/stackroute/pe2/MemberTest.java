@@ -59,9 +59,18 @@ public class MemberTest {
 
     {
         this.memberDetails.membername(null);
-        this.memberDetails.memberage(null);
-        this.memberDetails.membersalary(null);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
 
+    {
+        this.memberDetails.memberage(null);
+    }
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
+
+    {
+        this.memberDetails.membersalary(null);
+    }
 }
