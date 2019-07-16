@@ -10,20 +10,21 @@ public class PowerOfNumberTest
 {
     PowerOfNumber powerOfNumber;
 
-    @Before
 /* This methods runs, before running any one of the test case .
    It is used to initialize the required variables
  */
+
+    @Before
     public void setup()
     {
 //        arrange
         powerOfNumber= new PowerOfNumber();
     }
 
-    @After
 /* This method runs, after running all the test cases
    It is used to clear the initialized variables
  */
+    @After
     public void teardown()
     {
         powerOfNumber= null;

@@ -9,38 +9,30 @@ import static org.junit.Assert.*;
 public class UpperCaseConversionTest {
     private UpperCaseConversion upperCaseConversion;
 
+    /* This methods runs, before running any one of the test case .
+       It is used to initialize the required variables
+     */
     @Before
-/* This methods runs, before running any one of the test case .
-   It is used to initialize the required variables
- */
-    public void setup()
-    {
+    public void setup() {
 //        arrange
-        this.upperCaseConversion= new UpperCaseConversion();
+        this.upperCaseConversion = new UpperCaseConversion();
     }
 
+    /* This methods runs, before running any one of the test case .
+       It is used to initialize the required variables
+     */
     @After
-/* This methods runs, before running any one of the test case .
-   It is used to initialize the required variables
- */
-    public void teardown()
-    {
-        upperCaseConversion= null;
+    public void teardown() {
+        upperCaseConversion = null;
     }
 
-@Test
-    public void givenFileShouldReturnAString()
-{
+    @Test
+    public void givenFileShouldReturnAString() {
 //    act
-    String filename= "name.txt";
-    String actualresult= this.upperCaseConversion.readFileContent(filename);
+        String filename = "name.txt";
+        String actualresult = this.upperCaseConversion.readFileContent(filename);
 //    assert
-    assertEquals("11 HELLO WORLD",actualresult);
-}
+        assertEquals("11 HELLO WORLD", actualresult);
+    }
 
-@Test (expected = NullPointerException.class)
-    public void givenFileShouldReturnNullPointerException()
-{
-    this.upperCaseConversion.readFileContent(null);
-}
 }

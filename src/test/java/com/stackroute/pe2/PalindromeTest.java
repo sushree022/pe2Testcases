@@ -9,20 +9,21 @@ import static org.junit.Assert.*;
 public class PalindromeTest {
     Palindrome palindrome;
 
+    /* This methods runs, before running any one of the test case .
+       It is used to initialize the required variables
+     */
     @Before
-/* This methods runs, before running any one of the test case .
-   It is used to initialize the required variables
- */
     public void setup()
     {
 //        arrange
         palindrome= new Palindrome();
     }
 
-    @After
 /* This methods runs, before running any one of the test case .
    It is used to initialize the required variables
  */
+
+    @After
     public void teardown()
     {
         palindrome= null;

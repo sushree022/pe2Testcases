@@ -9,19 +9,20 @@ import static org.junit.Assert.*;
 public class MemberTest {
     MemberDetails memberDetails;
 
+    /* This methods runs, before running any one of the test case .
+       It is used to initialize the required variables
+     */
     @Before
-/* This methods runs, before running any one of the test case .
-   It is used to initialize the required variables
- */
     public void setup()
     {
 //        arrange
         memberDetails= new MemberDetails();
     }
+
+    /* This method runs, after running all the test cases
+       It is used to clear the initialized variables
+     */
     @After
-/* This method runs, after running all the test cases
-   It is used to clear the initialized variables
- */
     public void teardown()
     {
         memberDetails= null;

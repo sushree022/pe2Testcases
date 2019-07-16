@@ -9,19 +9,20 @@ import static org.junit.Assert.*;
 public class EvenNumTestTest {
     public static EvenNumTest evenNumTest;
 
-    @Before
 /* This methods runs, before running any one of the test case .
    It is used to initialize the required variables
  */
+    @Before
     public void setup()
     {
 //        arrange
         evenNumTest= new EvenNumTest();
     }
+
+    /* This method runs, after running all the test cases
+       It is used to clear the initialized variables
+     */
     @After
-/* This method runs, after running all the test cases
-   It is used to clear the initialized variables
- */
     public void teardown()
     {
         evenNumTest= null;
