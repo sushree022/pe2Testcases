@@ -6,43 +6,44 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EvenNumTestTest {
-    private static EvenNumTest evenNumTest;
+public class EvenNumTest {
+    private static EvenNum evenNumTest;
 
-    @Before
 /* This methods runs, before running any one of the test case .
    It is used to initialize the required variables
  */
+    @Before
     public void setup()
     {
 //        arrange
-        evenNumTest= new com.stackroute.pe2.EvenNumTest();
+        evenNumTest= new com.stackroute.pe2.EvenNum();
     }
+
+    /* This method runs, after running all the test cases
+       It is used to clear the initialized variables
+     */
     @After
-/* This method runs, after running all the test cases
-   It is used to clear the initialized variables
- */
     public void teardown()
     {
         evenNumTest= null;
     }
 
     @Test
-    public void givenNumberShouldReturnBooleanTrue()
+    public void givenEvenNumberShouldReturnString()
     {
 //        act
-        boolean actualresult= this.evenNumTest.isEven(54);
+        String actualresult= this.evenNumTest.isEven(54);
 //        assert
-        assertEquals(true, actualresult);
+        assertEquals("true", actualresult);
     }
 
     @Test
-    public void givenNumberShouldReturnBooleanFalse()
+    public void givenOddNumberShouldReturnString()
     {
 //        act
-        boolean actualresult= this.evenNumTest.isEven(83);
+        String actualresult= this.evenNumTest.isEven(83);
 //        assert
-        assertEquals(false, actualresult);
+        assertEquals("false", actualresult);
     }
 
     @Test
@@ -58,7 +59,7 @@ public class EvenNumTestTest {
     public void givenStringShouldReturnAStringMessage()
     {
 //        act
-        String actualresult= this.evenNumTest.isEven("hello");
+        String actualresult= this.evenNumTest.isInputString("hello");
 //        assert
         assertEquals("Only numbers allowed", actualresult);
     }
@@ -67,7 +68,7 @@ public class EvenNumTestTest {
     public void givenStringShouldReturnNullPointerException()
 
     {
-        this.evenNumTest.isEven(null);
+        this.evenNumTest.isInputString(null);
     }
 
 }
