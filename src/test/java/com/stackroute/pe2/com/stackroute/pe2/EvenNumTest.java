@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EvenNumTestTest {
-    public static EvenNumTest evenNumTest;
+    private static EvenNumTest evenNumTest;
 
     @Before
 /* This methods runs, before running any one of the test case .
@@ -16,7 +16,7 @@ public class EvenNumTestTest {
     public void setup()
     {
 //        arrange
-        evenNumTest= new EvenNumTest();
+        evenNumTest= new com.stackroute.pe2.EvenNumTest();
     }
     @After
 /* This method runs, after running all the test cases
