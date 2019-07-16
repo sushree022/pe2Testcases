@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class EvenNumTestTest {
-    EvenNumTest evenNumTest;
+    public static EvenNumTest evenNumTest;
 
     @Before
 /* This methods runs, before running any one of the test case .
@@ -35,6 +35,7 @@ public class EvenNumTestTest {
 //        assert
         assertEquals(true, actualresult);
     }
+
     @Test
     public void givenNumberShouldReturnBooleanFalse()
     {
@@ -43,4 +44,30 @@ public class EvenNumTestTest {
 //        assert
         assertEquals(false, actualresult);
     }
+
+    @Test
+    public void givenNegativeNumberShouldReturnAString()
+    {
+//        act
+        String actualresult= this.evenNumTest.isEven(-5);
+//        assert
+        assertEquals("Enter positive number only", actualresult);
+    }
+
+    @Test
+    public void givenStringShouldReturnAStringMessage()
+    {
+//        act
+        String actualresult= this.evenNumTest.isEven("hello");
+//        assert
+        assertEquals("Only numbers allowed", actualresult);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
+
+    {
+        this.evenNumTest.isEven(null);
+    }
+
 }
