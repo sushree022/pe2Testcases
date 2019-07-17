@@ -10,7 +10,7 @@ public class Member {
     double salary;
 
 }
-class MemberDetails {
+class MemberDetails extends Member {
 
 //    Created instance Member class
     Member member=new Member();

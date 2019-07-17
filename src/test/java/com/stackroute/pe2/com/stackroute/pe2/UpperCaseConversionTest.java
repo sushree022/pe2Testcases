@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -29,18 +31,18 @@ public class UpperCaseConversionTest {
     }
 
     @Test
-    public void givenFileShouldReturnAString() {
+    public void givenFileShouldReturnAString() throws FileNotFoundException, IOException {
 //    act
-        String filename ="name.txt";
+        String filename ="/home/test/Desktop/name.txt";
         String actualresult = this.upperCaseConversion.readfileContentAndConvertToUpperCase(filename);
 //    assert
         assertEquals("11 HELLO WORLD", actualresult);
     }
 
     @Test
-    public void givenFileContainingNoTextShouldReturnAStringMessage() {
+    public void givenFileContainingNoTextShouldReturnAStringMessage() throws FileNotFoundException, IOException{
 //    act
-        String filename = "name.txt";
+        String filename = "/home/test/Desktop/name.txt";
         String actualresult = this.upperCaseConversion.readfileContentAndConvertToUpperCase(filename);
 //    assert
         assertEquals("No text in the file", actualresult);

@@ -54,19 +54,19 @@ public class MemberTest {
 //        assert
         assertEquals("Member's Salary: 2500.3", actualresult);
     }
-
-//    @Test(expected = NullPointerException.class)
-//    public void givenStringShouldReturnNullPointerException()
 //
-//    {
-//        this.memberDetails.memberName(null);
+//    @Test
+//    public void givenNullShouldReturnNullPointerException()
+//
+//    {   String expectedresult=memberDetails.member.name.NullPointerException();
+//        actualresult=memberDetails.memberName(null);
 //    }
 //
 //    @Test(expected = NullPointerException.class)
 //    public void givenStringShouldReturnNullPointerException()
 //
 //    {
-//        this.memberDetails.memberAge(null);
+//        this.memberDetails.memberAge(0);
 //    }
 //    @Test(expected = NullPointerException.class)
 //    public void givenStringShouldReturnNullPointerException()
